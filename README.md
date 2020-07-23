@@ -44,15 +44,13 @@ Comment: Finally comments has already been stated as having the **relations** to
 
 **R12. User Stories**
 
+User:
+
 As a user I want to create an Account and log on to access the authorised parts of the website.
 
 As A User I want to be able to view my profile so I can view all the memes I own.
 
 As A User I want to be able to view my profile so I can update my profile information.
-
-As A User I want to be able to edit the price or availability of a meme from my collection.
-
-As A User i want to be able to add additional memes to my collection, with the potential of selling them. 
 
 As A User I want to be able to add comments to other people's profile or Meme's (Or my own).
 
@@ -60,21 +58,27 @@ As A User I want to be able to view another persons meme.
 
 As A User I want to be able to view another persons profile.
 
-As A User I want to be able to buy another person's meme through the page I'm viewing the meme.
-
 As A User I would like to be able to access my profile at any point.
 
 As A User I want to be able to log out.
 
+Artist/Seller:
+
+As A User I want to be able to edit the price or availability of a meme from my collection.
+
+As A User i want to be able to add additional memes to my collection, with the potential of selling them. 
+
+As A User I want to be able to buy another person's meme through the page I'm viewing the meme.
+
 **R.13** **Wireframes**
 
-![](readme_img/Login Page.png)
+![Login Page](readme_img/Login Page.png)
 
-![](readme_img/Create Account Page.png)
+![Create Account](readme_img/Create Account Page.png)
 
 ![Marketplace](readme_img/Marketplace.png)
 
-![](readme_img/Main Page.png)
+![Main Page](readme_img/Main Page.png)
 
 ![Show Html Page](readme_img/Show Html Page.png)
 
