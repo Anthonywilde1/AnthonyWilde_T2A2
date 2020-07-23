@@ -72,17 +72,17 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 **R.13** **Wireframes**
 
-![Login Page](readme_img/Login Page.png)
+![Login Page](./readme_img/Login Page.png)
 
-![Create Account](readme_img/Create Account Page.png)
+![Create Account](./readme_img/Create Account Page.png)
 
-![Marketplace](readme_img/Marketplace.png)
+![Marketplace](./readme_img/Marketplace.png)
 
-![Main Page](readme_img/Main Page.png)
+![Main Page](./readme_img/Main Page.png)
 
-![Show Html Page](readme_img/Show Html Page.png)
+![Show Html Page](./readme_img/Show Html Page.png)
 
-![](readme_img/Adding your me me to the meme marketplace maliciously .png)
+![](./readme_img/Adding your me me to the meme marketplace maliciously .png)
 
 ![Create Account Page](readme_img/Create Account Page.png)
 
@@ -92,7 +92,7 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 **R.14 ERD**
 
-![](readme_img/Meme Market.png)
+![](./readme_img/Meme Market.png)
 
 DO THIS ONE AFTER FINISHING THE APP VVVVVVVVVVVVV
 
