@@ -22,6 +22,8 @@ Functionality/ Features: My Website will have the ability to buy and sell your m
 
 Target audience: My website has a target audience of anyone, however being realistic about the demographics probably the audience is young adolescent males and females. With some users in their early 20's as well.
 
+Sitemap: ![](/home/anthony/Downloads/20200722_143844.jpg)
+
 **R18. Discuss the database relations to be implemented.** 
 
 My database has very few relations to keep the project simple and effective. There is 4 database tables in my design; **User**, **Meme**, **Transaction** and **Comment**.
@@ -58,9 +60,29 @@ As A User I would like to be able to access my profile at any point.
 
 As A User I want to be able to log out.
 
+**R.13** **Wireframes**
 
+![](/home/anthony/Desktop/Login Page.png)
 
+![Create Account Page](/home/anthony/Desktop/Create Account Page.png)
 
+![](/home/anthony/Desktop/Marketplace.png)
+
+![](/home/anthony/Desktop/Main Page.png)
+
+![](/home/anthony/Desktop/Show Html Page.png)
+
+![Adding your me me to the meme marketplace maliciously ](/home/anthony/Desktop/Adding your me me to the meme marketplace maliciously .png)
+
+![](/home/anthony/Desktop/Purchasing Power of the People.png)
+
+![Fixing the mistakes I made in my original posting](/home/anthony/Desktop/Fixing the mistakes I made in my original posting.png)
+
+![]()
+
+**R.14 ERD**
+
+![](/home/anthony/Downloads/Meme Market.png)
 
 DO THIS ONE AFTER FINISHING THE APP VVVVVVVVVVVVV
 
