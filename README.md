@@ -1,3 +1,7 @@
+---
+
+---
+
 # AnthonyWilde_T2A2
 
 R7. Identification of the *problem* you are trying to solve by building this particular marketplace *app*.**
@@ -22,7 +26,9 @@ Functionality/ Features: My Website will have the ability to buy and sell your m
 
 Target audience: My website has a target audience of anyone, however being realistic about the demographics probably the audience is young adolescent males and females. With some users in their early 20's as well.
 
-Sitemap: ![20200722_143844](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/20200722_143844.jpg)
+Sitemap:
+
+![](/readme_img/20200722_143844.jpg)
 
 **R18. Discuss the database relations to be implemented.** 
 
