@@ -68,23 +68,23 @@ As A User I want to be able to log out.
 
 **R.13** **Wireframes**
 
-![](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Login Page.png)
+![](readme_img/Login Page.png)
 
-![](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Create Account Page.png)
+![](readme_img/Create Account Page.png)
 
-![Marketplace](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Marketplace.png)
+![Marketplace](readme_img/Marketplace.png)
 
-![](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Main Page.png)
+![](readme_img/Main Page.png)
 
-![Show Html Page](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Show Html Page.png)
+![Show Html Page](readme_img/Show Html Page.png)
 
-![](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Adding your me me to the meme marketplace maliciously .png)
+![](readme_img/Adding your me me to the meme marketplace maliciously .png)
 
-![Create Account Page](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Create Account Page.png)
+![Create Account Page](readme_img/Create Account Page.png)
 
-![Fixing the mistakes I made in my original posting](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Fixing the mistakes I made in my original posting.png)
+![Fixing the mistakes I made in my original posting](readme_img/Fixing the mistakes I made in my original posting.png)
 
-![Purchasing Power of the People](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Purchasing Power of the People.png)
+![Purchasing Power of the People](readme_img/Purchasing Power of the People.png)
 
 **R.14 ERD**
 
