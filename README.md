@@ -88,7 +88,7 @@ As A User I want to be able to log out.
 
 **R.14 ERD**
 
-![](/home/anthony/Desktop/AnthonyWilde_T2A2/readme_img/Meme Market.png)
+![](readme_img/Meme Market.png)
 
 DO THIS ONE AFTER FINISHING THE APP VVVVVVVVVVVVV
 
