@@ -72,27 +72,27 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 **R.13** **Wireframes**
 
-![Login Page](./readme_img/Login Page.png)
+![Login Page](./readme_img/LoginPage.png)
 
-![Create Account](./readme_img/Create Account Page.png)
+![Create Account](./readme_img/CreateAccountPage.png)
 
 ![Marketplace](./readme_img/Marketplace.png)
 
-![Main Page](./readme_img/Main Page.png)
+![Main Page](./readme_img/MainPage.png)
 
-![Show Html Page](./readme_img/Show Html Page.png)
+![Show Html Page](./readme_img/ShowHtmlPage.png)
 
-![](./readme_img/Adding your me me to the meme marketplace maliciously .png)
+![](./readme_img/Addingyourmemetothemememarketplacemaliciously.png)
 
-![Create Account Page](readme_img/Create Account Page.png)
+![Create Account Page](readme_img/CreateAccountPage.png)
 
-![Fixing the mistakes I made in my original posting](readme_img/Fixing the mistakes I made in my original posting.png)
+![Fixing the mistakes I made in my original posting](readme_img/FixingthemistakesImadeinmyoriginalposting.png)
 
-![Purchasing Power of the People](readme_img/Purchasing Power of the People.png)
+![Purchasing Power of the People](readme_img/PurchasingPowerofthePeople.png)
 
 **R.14 ERD**
 
-![](./readme_img/Meme Market.png)
+![](./readme_img/MemeMarket.png)
 
 DO THIS ONE AFTER FINISHING THE APP VVVVVVVVVVVVV
 
