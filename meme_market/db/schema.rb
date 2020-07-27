@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_121103) do
     t.text "description"
     t.string "image"
     t.float "price"
-    t.text "category"
+    t.integer "category"
     t.boolean "for_sale"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

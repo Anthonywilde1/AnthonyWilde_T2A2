@@ -5,7 +5,7 @@ class CreateMemes < ActiveRecord::Migration[6.0]
       t.text :description
       t.string :image
       t.float :price
-      t.text :category
+      t.integer :category
       t.boolean :for_sale
       t.references :user, null: false, foreign_key: true
 
