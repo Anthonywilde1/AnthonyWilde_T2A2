@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_233618) do
+ActiveRecord::Schema.define(version: 2020_07_27_050410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "memes", force: :cascade do |t|
+    t.text "name"
+    t.text "description"
+    t.string "image"
+    t.float "price"
+    t.text "category"
+    t.boolean "for_sale"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_memes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -29,4 +42,5 @@ ActiveRecord::Schema.define(version: 2020_07_26_233618) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "memes", "users"
 end
