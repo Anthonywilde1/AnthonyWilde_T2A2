@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def meme_array
-  self.meme = []
+  self.memes = []
   end
 
 end
