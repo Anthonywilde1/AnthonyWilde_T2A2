@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  before_create :meme_array
+  before_create :meme_array, :capital
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :memes
@@ -11,5 +11,11 @@ class User < ApplicationRecord
   def meme_array
   self.memes = []
   end
+
+  def capital
+    self.username = username.capitalize
+  end
+  #to ensure Usernames arent blank AND too long
+  validates :name, length: {within: 5..50, message:"Username must be within 5 - 50 Characters"}
 
 end
