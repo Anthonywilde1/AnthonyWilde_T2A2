@@ -8,8 +8,7 @@
     User.create(username: "Carl", email:"Carlsan@daijobu.com", password: "123456")
     User.create(username: "Zeb", email: "Zeb@Zeb.com", password: "turtleneckndchain")
     User.create(username: "Anfii", email: "Anfii@Anfii.com", password: "Therealanfii")
-    User.create(username: "Dane", email: "Myfrienddane@Dane.com", password: "hadaneha")
-    User.create(username: "Latchy", email: "Eggboi@eggboi.com", password: "heliketheeggs")
+    #had 5 users decided to shrink to 3 was unnecessary
     User.first.memes.create(name: "Spiderman", description: "funny", image: "yes", price: 2.50, category: 3, for_sale: true)
     User.first.memes.create(name: "Mememan", description: "hahahehehaha", image: "sure", price: 5.50, category: 4, for_sale: true)
     User.find(2).memes.create(name: "Doge", description: "woofer", image: "here", price: 10, category: 1, for_sale: false)

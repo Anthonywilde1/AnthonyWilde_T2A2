@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :comments
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
+  #puts memes into an array for users
   def meme_array
   self.memes = []
   end

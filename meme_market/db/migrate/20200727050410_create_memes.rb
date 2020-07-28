@@ -1,11 +1,15 @@
 class CreateMemes < ActiveRecord::Migration[6.0]
   def change
     create_table :memes do |t|
+      #just flavor text
       t.text :name
       t.text :description
+      #string as its a AWS link in the end
       t.string :image
+      #float because dollars and cents
       t.float :price
       t.integer :category
+      #if set to false then a buy option will not appear on page for users, may also hide price
       t.boolean :for_sale
       t.references :user, null: false, foreign_key: true
 

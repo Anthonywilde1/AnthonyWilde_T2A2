@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_121103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
+  #Comments cant exist without a user and meme  they are associated with and must also be a comment
   create_table "comments", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "meme_id", null: false
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_121103) do
     t.index ["meme_id"], name: "index_comments_on_meme_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
-
+  #memes has value string for image because of AWS to be implemented later. Memes must also belong to a User at all times.
   create_table "memes", force: :cascade do |t|
     t.text "name"
     t.text "description"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_121103) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_memes_on_user_id"
   end
-
+  #this table is just to count how many times a meme has changed hands
   create_table "transactions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "meme_id", null: false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_121103) do
     t.index ["meme_id"], name: "index_transactions_on_meme_id"
     t.index ["user_id"], name: "index_transactions_on_user_id"
   end
-
+  #repurposed devise gem table
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "email", null: false
