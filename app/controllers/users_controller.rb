@@ -19,10 +19,12 @@ class UsersController < ApplicationController
     #Show User Page
     def show
         @user = User.find(params[:id])
+        @memes = @user.memes
     end
     #Edit User Page
     def edit
         @user = User.find(params[:id])
+        @memes = @user.memes
     end
     #Update User Info
     def update
@@ -35,8 +37,6 @@ class UsersController < ApplicationController
         end
     end
     
-
-
     private
     def user_params
         params.require(:user).permit(:username, :email, :password)

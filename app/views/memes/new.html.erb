@@ -1,0 +1,25 @@
+<h1> Please enter the fields below to create a Meme </h1>
+
+<%= form_with url: user_memes_path, local: true do |m| %>
+
+<p><%= m.label :name %></br>
+<%= m.text_field :name %></p>
+
+<p> <%= m.label :description %></br>
+<%= m.text_field :description %>
+
+<p> <%= m.label :image %></br>
+<%= m.text_field :image %></p>
+
+<p> <%= m.label :price %></br>
+<%= m.number_field :price %></p>
+
+<p> <%= m.label :category %></br>
+<%= m.select :category, @user.memes.categories.keys.to_a %></p>
+
+<p> <%= m.label :for_sale %></br>
+<%= m.check_box :for_sale %></p>
+
+<p> <%= m.submit "Create"%> </p>
+
+<% end %>
