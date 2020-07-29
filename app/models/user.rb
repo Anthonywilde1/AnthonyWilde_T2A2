@@ -16,6 +16,6 @@ class User < ApplicationRecord
     self.username = username.capitalize
   end
   #to ensure Usernames arent blank AND too long
-  validates :name, length: {within: 5..50, message:"Username must be within 5 - 50 Characters"}
+  validates :username, length: {within: 5..50, message:"Username must be within 5 - 50 Characters"}
 
 end
