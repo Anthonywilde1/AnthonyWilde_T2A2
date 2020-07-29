@@ -2,3 +2,8 @@
 <% if @user == current_user %>
 <%= link_to 'edit', edit_user_path(@user) %>
 <% end %>
+
+<% @user.memes.each do |u| %>
+<p><%= u.name %></p>
+<p><%= u.price %></p>
+<% end %>
