@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-    User.create(username: "Carl", email:"Carlsan@daijobu.com", password: "123456")
-    User.create(username: "Zeb", email: "Zeb@Zeb.com", password: "turtleneckndchain")
+    User.create(username: "Carlsan", email:"Carlsan@daijobu.com", password: "123456")
+    User.create(username: "Zebbu", email: "Zeb@Zeb.com", password: "turtleneckndchain")
     User.create(username: "Anfii", email: "Anfii@Anfii.com", password: "Therealanfii")
     #had 5 users decided to shrink to 3 was unnecessary
     User.first.memes.create(name: "Spiderman", description: "funny", image: "yes", price: 2.50, category: 3, for_sale: true)
