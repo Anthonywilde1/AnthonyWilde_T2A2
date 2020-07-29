@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
     #Login page
     def index
-        @users = Users.all
+        @users = User.all
         @memes = Meme.all
     end
     #New User 
