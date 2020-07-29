@@ -24,6 +24,14 @@ class UsersController < ApplicationController
     def edit
         @user = User.find(params[:id])
     end
+    #Update User Info
+    def update
+        @user = User.find(params[:id])
+
+        if @user.update_attributes(user_params)
+            redirect_to :action => 'show', :id => @user
+        end
+    end
     #Delete User Page?
 
 
