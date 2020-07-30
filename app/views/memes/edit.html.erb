@@ -3,16 +3,16 @@
 <%= form_with url: edit_user_meme_path, local: true do |m| %>
 
 <p><%= m.label :name %></br>
-<%= m.text_field :name %>
+<%= m.text_field :name, :value => @meme.name %>
 
 <p> <%= m.label :description %></br>
-<%= m.text_field :description %>
+<%= m.text_field :description, :value => @meme.description %>
 
 <p> <%= m.label :image %></br>
-<%= m.text_field :image %></p>
+<%= m.text_field :image, :value => @meme.image %></p>
 
 <p> <%= m.label :price %></br>
-<%= m.number_field :price %></p>
+<%= m.number_field :price, :value => @meme.price %></p>
 
 <p> <%= m.label :category %></br>
 <%= m.select :category, @user.memes.categories.keys.to_a %></p>
