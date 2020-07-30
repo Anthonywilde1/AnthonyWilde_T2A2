@@ -20,15 +20,19 @@ class MemesController < ApplicationController
     end
 
     def show
-        @meme = Meme.find(params[:id])
+        @user = User.find(params[:user_id])
+        @meme = @user.memes.find(params[:id])
     end
 
     def edit
-        @meme = Meme.find(params[:id])
+        @user = User.find(params[:user_id])
+        @meme = @user.memes.find(params[:id])
+        
     end
 
     def update
-        @meme = Meme.find(params[:id])
+        @user = User.find(params[:user_id])
+        @meme = @user.memes.find(params[:id])
 
         if @meme.update(spiciness_checker)
             redirect_to :action => 'show', :id => @meme

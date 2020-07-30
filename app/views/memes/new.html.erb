@@ -1,3 +1,4 @@
+<% if @user == current_user %>
 <h1> Please enter the fields below to create a Meme </h1>
 
 <%= form_with url: user_memes_path, local: true do |m| %>
@@ -22,4 +23,5 @@
 
 <p> <%= m.submit "Create"%> </p>
 
+<% end %>
 <% end %>
