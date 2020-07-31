@@ -1,7 +1,11 @@
+<%# This stops any user who isnt authorized account from editing%>
 <% if @user == current_user %>
-<h1> Edit Test</h1> 
+<h1>Please edit below</h1> 
+
+<%# need to add error handling messages%>
 <%= form_with url: edit_user_meme_path, local: true do |m| %>
 
+<%# values added to show what user will edit%>
 <p><%= m.label :name %></br>
 <%= m.text_field :name, :value => @meme.name %>
 
@@ -14,6 +18,7 @@
 <p> <%= m.label :price %></br>
 <%= m.number_field :price, :value => @meme.price %></p>
 
+<%# with enums allows to select from enums %>
 <p> <%= m.label :category %></br>
 <%= m.select :category, @user.memes.categories.keys.to_a %></p>
 

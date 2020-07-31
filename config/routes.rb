@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   #my initial page that will have memes displayed on it
   resources :users, except:[:destroy, :new, :create] do 
     resources :memes, except:[:index]
-  root "users#index" 
-  #get "users/:id", to: "users#show"
-  #get "users/:id/edit", to: "users#edit"
-  #patch "users/:id", to: "users#update"
+  
+
   end
+  root "users#index" 
 end

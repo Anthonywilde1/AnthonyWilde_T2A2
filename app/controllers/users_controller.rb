@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    #devise helper methods to check that someone is logged in
     before_action :authenticate_user!
     before_action :current_user
 
@@ -16,6 +17,7 @@ class UsersController < ApplicationController
      #   @user = User.new(user_params)
       #  @user.save
     #end
+
     #Show User Page
     def show
         @user = User.find(params[:id])
