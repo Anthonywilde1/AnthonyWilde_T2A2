@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     #Login page
     def index
         @users = User.all
+        @user = current_user
         @memes = Meme.all
     end
     #New User 

@@ -6,12 +6,13 @@ RSpec.describe UsersController, type: :controller do
         it "200 the index page" do
             expect(response.status).to eq(200)
         end
-
+        # Ideally wanted to test rendering of Index however stuck on devise login
         #it "renders index" do
-           # sign_in 
+            
+            #login_as(:username => "Anfii", :password => "Therealanfii") 
             #get :index
            # assert_response :success
-       # end
+        #end
 
         it "does not render other templates" do
             expect(response).to_not render_template(:show)
