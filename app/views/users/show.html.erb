@@ -7,4 +7,5 @@
 <% @user.memes.each do |u| %>
 <p><%= u.name %></p>
 <p><%= u.price %></p>
+<%= link_to "#{u.name}'s page", user_meme_path(u[:user_id], u.id) %>
 <% end %>
