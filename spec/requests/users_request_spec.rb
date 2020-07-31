@@ -7,6 +7,12 @@ RSpec.describe UsersController, type: :controller do
             expect(response.status).to eq(200)
         end
 
+        #it "renders index" do
+           # sign_in 
+            #get :index
+           # assert_response :success
+       # end
+
         it "does not render other templates" do
             expect(response).to_not render_template(:show)
         end
