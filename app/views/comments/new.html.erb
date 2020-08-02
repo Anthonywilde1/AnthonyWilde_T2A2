@@ -1,0 +1,11 @@
+<%= render partial: "shared/menu"%>
+<h2> Comment below</h2>
+<%= form_with url: user_meme_comments_path, local: true do |c| %>
+
+<%= c.label :comment %>
+<%= c.text_field :comment %></br>
+<%# not working as intended %>
+<%= c.hidden_field(user_id: current_user) %>
+<%= c.hidden_field(meme_id: @meme) %>
+<%= c.submit "Post comment" %>
+<% end %>
