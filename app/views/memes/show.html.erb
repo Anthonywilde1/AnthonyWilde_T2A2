@@ -5,6 +5,13 @@
 <p><%= @meme.price %></p>
 <p><%= @meme.category %></p>
 <p><%= @meme.for_sale %></p>
-<%# edit button and purchase button need to be added below%>
-
+<%#  purchase button needs to be added below %>
+<% if @user == current_user %>
+<%= link_to "Edit Meme", edit_user_meme_path %>
+<% end %>
+<h2>Comments</h2>
+<% @comments.each do |c| %>
+<%= c.comment %></br>
+<%= User.find(c.user_id).username %> <%= c.created_at %>  </br>
+<% end %>
 

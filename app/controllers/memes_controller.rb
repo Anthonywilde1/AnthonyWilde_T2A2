@@ -26,6 +26,7 @@ class MemesController < ApplicationController
     def show
         @user = User.find(params[:user_id])
         @meme = @user.memes.find(params[:id])
+        @comments = @meme.comments.reverse
     end
 
     def edit
