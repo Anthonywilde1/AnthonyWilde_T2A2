@@ -3,26 +3,28 @@ class CommentsController < ApplicationController
     before_action :current_user
 
     def new
-        @user = User.find(params[:user_id])
-        @meme = @user.memes.find(params[:meme_id])
+        @user = current_user.id
         @comments = Comment.new
     end
 
     def create
-        #@user = User.find(params[:id])
-        #@meme = @user.memes.find(params[:id])
+        
+        
+        @meme = Meme.find(params[:meme_id])
+        @anchor = @meme.user_id
         @comments = Comment.new(comment_params)
+        @comments.user_id = current_user.id
         if @comments.save 
-            #redirect_to user_meme_url(@meme)
-            #I cant figure this out for right now
-            redirect_to :controller => 'memes', :action => 'show', meme_id: Comment.meme_id, user_id: Comment.user_id
+            flash[:notice] = "Comment has been posted."
+            redirect_to user_meme_path(@anchor, @meme)
         else
+            flash.now[:alert] = "comment has not been created."
             "new"
         end
     end
 
     def edit
-        @user = User.find(params[:user_id])
+        @user = current_user
         @meme = @user.memes.find(params[:meme_id])
         @comments = @memes.comments.find(params[:id])
     end
@@ -31,10 +33,13 @@ class CommentsController < ApplicationController
     end
 
     def destroy
+        @user = current_user
     end
 
     private
     def comment_params
-        params.permit(:comment, :user_id,:meme_id)
+        params.permit(:comment, :meme_id, :user_id)
     end
+
+    
 end
