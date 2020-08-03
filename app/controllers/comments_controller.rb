@@ -8,8 +8,6 @@ class CommentsController < ApplicationController
     end
 
     def create
-        
-        
         @meme = Meme.find(params[:meme_id])
         @anchor = @meme.user_id
         @comments = Comment.new(comment_params)
