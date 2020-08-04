@@ -1,4 +1,5 @@
 <%= render partial: "shared/menu"%>
+<% if @usercheck == current_user%>
 <%= @meme.name %>
 <h2> Comment below</h2>
 <%= form_with url: user_meme_comment_path, local: true, method: "PATCH" do |c| %>
@@ -7,4 +8,5 @@
 <%= c.text_field :comment  %></br>
 
 <%= c.submit "Update comment" %>
+<% end %>
 <% end %>

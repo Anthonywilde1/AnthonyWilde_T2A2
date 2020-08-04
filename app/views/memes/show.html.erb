@@ -17,7 +17,7 @@
 <%= User.find(c.user_id).username %> <%= c.created_at %></br>
 <% if c.user_id == current_user.id %>
 <%= link_to "Edit Comment", edit_user_meme_comment_path(c.user_id, c.meme_id, c.id) %>
-<%= link_to "Delete This", delete_comment_path_path,  method: :delete, data: {confirm: "Are you sure c:?"} %></br></br>
+<%= link_to "Delete This", delete_comment_path_path(c), method: :delete, data: {confirm: "Are you sure c:?"} %></br></br>
 <% end %>
 <% end %>
 

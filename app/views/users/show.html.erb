@@ -8,5 +8,7 @@
 <p><%= u.name %></p>
 <p><%= u.price %></p>
 <%= link_to "#{u.name}'s page", user_meme_path(u[:user_id], u.id) %>
+<% if @user == current_user %>
 <%= link_to "Edit Meme", edit_user_meme_path(u[:user_id], u.id) %>
+<% end %>
 <% end %>

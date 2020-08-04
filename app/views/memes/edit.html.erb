@@ -4,7 +4,7 @@
 <h1>Please edit below</h1> 
 
 <%# need to add error handling messages%>
-<%= form_with url: edit_user_meme_path, local: true do |m| %>
+<%= form_with url: user_meme_path, local: true, method: "PATCH" do |m| %>
 
 <%# values added to show what user will edit%>
 <p><%= m.label :name %></br>
