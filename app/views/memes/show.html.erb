@@ -10,8 +10,14 @@
 <%= link_to "Edit Meme", edit_user_meme_path %>
 <% end %>
 <h2>Comments</h2>
-<% @comments.each do |c| %>
+<%= link_to "Add Comment", new_user_meme_comment_path(@user, @meme) %></br>
+</br>
+<% @comment.each do |c| %>
 <%= c.comment %></br>
-<%= User.find(c.user_id).username %> <%= c.created_at %>  </br>
+<%= User.find(c.user_id).username %> <%= c.created_at %></br>
+<% if c.user_id == current_user.id %>
+<%= link_to "Edit Comment", edit_user_meme_comment_path(c.user_id, c.meme_id, c.id) %>
+<%= link_to "Delete This", delete_comment_path_path,  method: :delete, data: {confirm: "Are you sure c:?"} %></br></br>
+<% end %>
 <% end %>
 

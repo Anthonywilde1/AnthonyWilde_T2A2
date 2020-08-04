@@ -1,15 +1,13 @@
 class CommentsController < ApplicationController
     before_action :authenticate_user!
     before_action :current_user
+    before_action :find_comment, only: [:create, :edit, :delete, :update]
 
     def new
-        @user = current_user.id
         @comments = Comment.new
     end
 
     def create
-        @meme = Meme.find(params[:meme_id])
-        @anchor = @meme.user_id
         @comments = Comment.new(comment_params)
         @comments.user_id = current_user.id
         if @comments.save 
@@ -22,22 +20,43 @@ class CommentsController < ApplicationController
     end
 
     def edit
-        @user = current_user
-        @meme = @user.memes.find(params[:meme_id])
-        @comments = @memes.comments.find(params[:id])
+       
     end
 
     def update
+       
+        @comment = Comment.where(user_id: @user.id,meme_id: @meme.id )
+        if @comment.update(comment_params)
+             flash[:notice] = "Comment has been posted."
+             redirect_to user_meme_path(@meme.user_id, @meme)
+         else
+             flash.now[:alert] = "comment has not been created."
+             "edit"
+         end
+    
     end
 
-    def destroy
-        @user = current_user
+    def delete
+        params
+        @comment.destroy
+        #if respond_to do |format| 
+            #format.html {redirect_to user_meme_path(@meme.user_id, @meme), notice: "the cheese has been eaten, it was cheesy."}format.json{head: no_content}
+    
+        #end
     end
-
     private
     def comment_params
         params.permit(:comment, :meme_id, :user_id)
     end
+
+    #before actions find comment
+    def find_comment
+        @meme = Meme.find(params[:meme_id])
+        @user = current_user
+        @comment = Comment.where(user_id: @user.id, meme_id: @meme.id)
+    end
+
+
 
     
 end
