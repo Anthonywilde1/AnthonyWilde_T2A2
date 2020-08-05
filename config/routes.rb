@@ -10,8 +10,11 @@ Rails.application.routes.draw do
 
     end
   end
+  #success on stripe links
   get "/payments/success", to: "payments#success"
   post "/payments/webhook", to: "payments#webhook"
+  #needed to generate because comments r being deleted on meme page
   delete "/users/:user_id/memes/:id", to: "comments#destroy" , as: "delete_comment_path"
+  #root page
   root "users#index" 
 end
