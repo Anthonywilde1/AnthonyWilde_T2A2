@@ -5,7 +5,7 @@ class CreateMemes < ActiveRecord::Migration[6.0]
       t.text :name, null: false
       t.text :description
       #string as its a AWS link in the end
-      t.string :image, null: false
+      t.string :image
       #float because dollars and cents
       t.float :price, null: false
       t.integer :category

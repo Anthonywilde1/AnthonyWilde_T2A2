@@ -10,10 +10,10 @@
     User.create(username: "Anfii", email: "Anfii@Anfii.com", password: "Therealanfii")
     #had 5 users decided to shrink to 3 was unnecessary
     #Made some "memes"
-    User.first.memes.create(name: "Spiderman", description: "funny", image: "yes", price: 2.50, category: 3, for_sale: true)
-    User.first.memes.create(name: "Mememan", description: "hahahehehaha", image: "sure", price: 5.50, category: 4, for_sale: true)
-    User.find(2).memes.create(name: "Doge", description: "woofer", image: "here", price: 10, category: 1, for_sale: false)
-    User.find(3).memes.create(name: "Rare Pepe", description: "platinum pepe", image: "maybe", price: 500, category: 0, for_sale: false)
+    User.first.memes.create(name: "Spiderman", description: "funny", price: 2.50, category: 3, for_sale: true)
+    User.first.memes.create(name: "Mememan", description: "hahahehehaha", price: 5.50, category: 4, for_sale: true)
+    User.find(2).memes.create(name: "Doge", description: "woofer", price: 10, category: 1, for_sale: false)
+    User.find(3).memes.create(name: "Rare Pepe", description: "platinum pepe", price: 500, category: 0, for_sale: false)
     #generating some comments
     Comment.create(comment: "wow please sell me this I will pay you big $$$", user_id: 1, meme_id: 4)
     Comment.create(comment: "What a good boi", user_id: 3, meme_id: 3)
