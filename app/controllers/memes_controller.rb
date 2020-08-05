@@ -27,7 +27,30 @@ class MemesController < ApplicationController
         @user = User.find(params[:user_id])
         @meme = Meme.find(params[:id])
         @comment = @meme.comments
-        pp params
+        
+        session = Stripe::Checkout::Session.create(        
+            payment_method_types: ['card'],        
+            customer_email: current_user.email,        
+           
+            line_items: [{
+                name: @meme.name,
+                quantity: 1,
+                currency: 'aud',
+                amount: (@meme.price * 100).to_i,
+                }],
+            payment_intent_data: {           
+                metadata: {               
+                    user_id: current_user.id, 
+                    meme_id: @meme.id           
+                } 
+            },        
+            success_url: "#{root_url}payments/success?userId=#{current_user.id}&memeId=#{@meme.id}",
+            cancel_url: "#{root_url}users/:user_id/memes/:meme_id"   
+            
+        )     
+        @session_id = session.id 
+            
+        
     end
 
 

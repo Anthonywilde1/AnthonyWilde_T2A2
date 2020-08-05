@@ -1,15 +1,36 @@
 <%= render partial: "shared/menu"%>
 
+
 <h1><%= @meme.name %></h1>
-<p><%= image_tag @meme.image if @meme.image.attached?  %></p>
-<p><%= @meme.description %></p>
-<p><%= @meme.price %></p>
-<p><%= @meme.category %></p>
-<p><%= @meme.for_sale %></p>
+    <p><%= image_tag @meme.image if @meme.image.attached?  %></p>
+    <p><%= @meme.description %></p>
+    <p><%= @meme.price %></p>
+    <p><%= @meme.category %></p>
+    <p><%= @meme.for_sale %></p>
 <%#  purchase button needs to be added below %>
-<% if @user == current_user %>
-<%= link_to "Edit Meme", edit_user_meme_path %>
-<% end %>
+        <% if @user == current_user %>
+        <%= link_to "Edit Meme", edit_user_meme_path %>
+        <% end %>
+        <%#= add else %>
+        <button data-stripe="payment"> 
+        Buy Meme
+        <%= number_to_currency(@meme.price) %></button>
+        <%# end %> 
+        <script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    document
+    .querySelector("[data-stripe='payment']")
+    .addEventListener("click", () => {
+        const stripe = Stripe(
+            "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+        );
+
+        stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+        });
+    });
+</script>       
 <h2>Comments</h2>
 <%= link_to "Add Comment", new_user_meme_comment_path(@user, @meme) %></br>
 </br>

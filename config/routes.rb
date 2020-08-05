@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
     end
   end
+  get "/payments/success", to: "payments#success"
+  post "/payments/webhook", to: "payments#webhook"
   delete "/users/:user_id/memes/:id", to: "comments#destroy" , as: "delete_comment_path"
   root "users#index" 
 end
