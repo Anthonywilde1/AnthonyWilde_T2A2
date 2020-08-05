@@ -1,16 +1,16 @@
 <%= render partial: "shared/menu"%>
 <h1><%= @user.username %></h1> 
 <% if @user == current_user %>
-<%= link_to 'Edit User', edit_user_path(@user) %>
-<%= link_to 'Create Meme', new_user_meme_path(@user) %>
+    <%= link_to 'Edit User', edit_user_path(@user) %>
+    <%= link_to 'Create Meme', new_user_meme_path(@user) %>
 <% end %>
 
 <% @user.memes.each do |u| %>
-<p><%= u.name %></p>
-<p><%= u.price %></p>
-<p><%= image_tag u.image if u.image.attached? %></p>
-<%= link_to "#{u.name}'s page", user_meme_path(u[:user_id], u.id) %>
-<% if @user == current_user %>
-<%= link_to "Edit Meme", edit_user_meme_path(u[:user_id], u.id) %>
-<% end %>
+    <p><%= u.name %></p>
+    <p><%= u.price %></p>
+    <p><%= image_tag u.image if u.image.attached? %></p>
+    <%= link_to "#{u.name}'s page", user_meme_path(u[:user_id], u.id) %>
+    <% if @user == current_user %>
+        <%= link_to "Edit Meme", edit_user_meme_path(u[:user_id], u.id) %>
+    <% end %>
 <% end %>
