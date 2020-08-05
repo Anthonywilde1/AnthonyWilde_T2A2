@@ -8,7 +8,6 @@
     User.create(username: "Carlsan", email:"Carlsan@daijobu.com", password: "123456")
     User.create(username: "Zebbu", email: "Zeb@Zeb.com", password: "turtleneckndchain")
     User.create(username: "Anfii", email: "Anfii@Anfii.com", password: "Therealanfii")
-    #had 5 users decided to shrink to 3 was unnecessary
     #Made some "memes"
     User.first.memes.create(name: "Spiderman", description: "funny", price: 2.50, category: 3, for_sale: true)
     User.first.memes.create(name: "Mememan", description: "hahahehehaha", price: 5.50, category: 4, for_sale: true)
