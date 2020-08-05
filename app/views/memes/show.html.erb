@@ -1,7 +1,7 @@
 <%= render partial: "shared/menu"%>
 
 <h1><%= @meme.name %></h1>
-<p><%= image_tag @meme.image  %></p>
+<p><%= image_tag @meme.image if @meme.image.attached?  %></p>
 <p><%= @meme.description %></p>
 <p><%= @meme.price %></p>
 <p><%= @meme.category %></p>
