@@ -1,11 +1,11 @@
 <%= render partial: "shared/menu"%>
 <h1>Welcome Meme Friends! <h1>
 <h2> R.i.p Stefan Karl Stefansson</h2>
-<% @users.each do |u| %>
-    <% @memes.reverse.each do |m| %> 
-        <h4>Name:<%= m.name %></h4></br>
-        <img><%= image_tag m.image if m.image.attached?  %><img>
-        <h6><%= link_to "#{m.name}'s page", user_meme_path(m[:user_id], m.id) %></h6></br>
-        <h6><%= link_to "Owner: #{u.username}", user_path(u.id) %></h6></br>
-    <% end %>
+<%# I implemented code to reduce call backs to database, new code created iteration of every user over the objects in @meme %>
+<%# @users.each do |u| %>
+<% @memes.reverse.each do |m| %> 
+    <h4>Name:<%= m.name %></h4></br>
+    <%= image_tag m.image if m.image.attached?  %>
+    <h6><%= link_to "#{m.name}'s page", user_meme_path(m[:user_id], m.id) %></h6></br>
+    <h6><%= link_to "Owner", user_path(m.user_id) %></h6></br>
 <% end %>

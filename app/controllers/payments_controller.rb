@@ -8,6 +8,13 @@ class PaymentsController < ApplicationController
     end
 
     def webhook
+        puts "transferring ownership"
+        pp params
+        puts "-----------------------"
+        Meme.find(params[:meme_id]).update(user_id: current_user) 
+        puts "ownership transfered to #{current_user.username}"
+        puts "-----------------------"
+
         payment_id = params[:data][:object][:payment_intent]
         payment = Stripe::PaymentIntent.retieve(payment_id)
         meme_id = payment.metadata.meme_id
@@ -17,5 +24,6 @@ class PaymentsController < ApplicationController
         p "user_id" + user_id
 
         head :ok
+        
     end
 end
