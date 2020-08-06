@@ -39,9 +39,7 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-        #need to find meme_id as just id as action is executed in the meme controller
-        #I Know it sounds whack but its the only way it works dont @me
-        
+        #this is the version of destroy that worked
         @user = current_user
         @meme = Meme.find(params[:id])
         @comment = Comment.where(user_id: @user.id, meme_id: @meme.id)

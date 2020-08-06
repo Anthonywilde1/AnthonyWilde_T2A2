@@ -1,9 +1,10 @@
 <%= render partial: "shared/menu"%>
 <% if @user == current_user %>
-<%= form_with model: @user, local: true do |f| %>
-
-<p><%= f.label :username  %><br>
-<%= f.text_field :username %></p>
-<p><%= f.submit %></p>
-<% end %>
+    <%= form_with model: @user, local: true do |f| %>
+        
+        <p><%= f.label :username  %><br>
+        <%= f.text_field :username %></p>
+        
+        <p><%= f.submit %></p>
+    <% end %>
 <% end %>

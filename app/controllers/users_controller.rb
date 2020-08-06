@@ -2,10 +2,10 @@ class UsersController < ApplicationController
     #devise helper methods to check that someone is logged in
     before_action :authenticate_user!
     before_action :current_user
+    before_action :find_user, only: [:show, :edit, :update]
 
     #Login page
     def index
-        
         @users = User.all
         @user = current_user
         @memes = Meme.all
@@ -13,17 +13,17 @@ class UsersController < ApplicationController
 
     #Show User Page
     def show
-        @user = User.find(params[:id])
         @memes = @user.memes
     end
     #Edit User Page
     def edit
-        @user = User.find(params[:id])
+        if @user != current_user
+            redirect_to user_path(@user)
+        end
         @memes = @user.memes
     end
     #Update User Info
     def update
-        @user = User.find(params[:id])
 
         if @user.update(user_params)
             redirect_to :action => 'show', :id => @user
