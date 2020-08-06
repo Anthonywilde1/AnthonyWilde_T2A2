@@ -17,6 +17,7 @@ class Meme < ApplicationRecord
   validates :for_sale, exclusion: { in: [nil], message: "Please state whether the meme is for sale or not"}
   # to ensure that a meme has a price when created for the marketplace
   validates :price, numericality: { message: "This is a marketplace please states a price"}
+  validates :price, numericality: {less_than: 999999, message: "Meme must be worth less then 999,999"}
 
 
 
