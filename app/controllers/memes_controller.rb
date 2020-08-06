@@ -20,7 +20,7 @@ class MemesController < ApplicationController
         if @meme.save
             redirect_to @user
         else
-            "new"
+            render "new"
         end
     end
 
