@@ -18,7 +18,8 @@ class MemesController < ApplicationController
     def create
         @meme = @user.memes.new(spiciness_checker)
         if @meme.save
-            redirect_to @user
+            #edit to fix pathing
+            redirect_to user_path(@user)
         else
             render "new"
         end
