@@ -11,7 +11,7 @@ class Meme < ApplicationRecord
   # to ensure name is not nil and within 1-200 characters
   validates :name, length: { within: 1..200, message: "Meme must be between 5 to 200 characters"}
   #to ensure there is an image assosciated with the Meme which is the vital part to any meme
-  validates :image, presence: { message: "Image must exist for meme to be created"}
+  #validates :image, presence: { message: "Image must exist for meme to be created"}
   #to ensure that someone states whether their meme is for sale or not
   validates :for_sale, inclusion: { in: [true,false]}
   validates :for_sale, exclusion: { in: [nil], message: "Please state whether the meme is for sale or not"}
