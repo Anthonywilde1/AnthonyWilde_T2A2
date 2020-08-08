@@ -4,13 +4,21 @@
 
 # AnthonyWilde_T2A2
 
-R7. Identification of the *problem* you are trying to solve by building this particular marketplace *app*.**
+**R7. Identification of the *problem* you are trying to solve by building this particular marketplace *app*.**
 
 My website is a meme marketplace, I am seeking to 'monetise' memes. "Just as genes propagate themselves in the gene pool by leaping from body to body via sperms or eggs, so **memes** propagate themselves in the **meme** pool by leaping from brain to brain via a process which, in the broad sense, can be called imitation" Richard Dawkins said this and I agree with him. However I think that the people out there who scroll through the thousands upon thousands of hours of content making our gifs and our meme templates are being taken advantage of for the good work that they do. 
 
 **R8. Why is it a problem that needs solving?**
 
 My marketplace is necessary as it will allow for the acceleration of the memes in the world by allowing meme creators to profit off of there memes. It also is a very market directed economic model. If a meme creator tries to sell there memes for too much then the market will not purchase. Most people viewing memes aren't going to want to pay to much for memes so if someone starts bumping up prices or the quality of their work decreases people will not wish to have their memes anymore. Mainly as stated above its to help generate jobs where people can just create content for a living where as they previously did the work for free.
+
+**R9. Link to the deployed app**
+ 
+https://anthonywilde-t2a2.herokuapp.com/ 
+
+**R10 A Link to your GitHub repo**
+
+https://github.com/Anthonywilde1/AnthonyWilde_T2A2
 
 **R11. Description of your marketplace *app* (website), including:**
 **\- Purpose**
@@ -28,19 +36,19 @@ Target audience: My website has a target audience of anyone, however being reali
 
 Sitemap:
 
-![](/readme_img/20200722_143844.jpg)
+![Version 1](/readme_img/20200722_143844.jpg)
+![Version 2](/readme_img/20200808_152800.jpg)
 
-**R18. Discuss the database relations to be implemented.** 
+Tech stack
+Ruby: The programming language used to primarily create the app through an application called **Rails**. Rails creates ERB pages which are embedded ruby html pages. Creating a hybrid of HTML and ruby commands to create a webpage.
 
-My database has very few relations to keep the project simple and effective. There is 4 database tables in my design; **User**, **Meme**, **Transaction** and **Comment**.
+Javascript: Javascript is used within just one small part of stripe. In the button created to send you to the Stripe secure link it is done in Javascript.
 
-User table: The User Table has 3 associations; A **One(Zero) to Many(Zero)** relation with the Meme Table (meaning that one user can own many memes but also a possible 0 memes), a **Many to One** relation with comments (many comments belong to one User). Finally a single user could have many transactions (A **one to many** association). Because of these parameters I would implement the User table into the database first as it has no dependencies, this will be important because it'll be easy to test whether it is working separately (if there is any problems later on with dependencies it'll be a good reference point). 
+Stripe: An API that I used to create a payment platform for the memes. Stripe creates a button on pages you deem necessary of having said button which then links you to a secure webpage that allows you to put in credit card/ payment info and then redirects you to the website you were on.
 
-Meme: Memes as a class has a **many to one** relation with comments (many comments have one meme), also memes have a **one to many** with transactions (one meme has the potential of many transactions). I will make the Meme table, because it will be required that a User will make/ upload memes to the site so a Meme cannot exist without a User having creating it.
+AWS/ Amazon Web Services: Amazon Web Services is an API that allows your web app to communicate with Amazon Web Services to create online storage or 'cloud' storage for your web app. It allows you to hand off the storage of images/gifs/videos/etc rather then having it all within the application, making the website more bulky or eventually exceed data storage capacity. 
 
-Transaction: I will create The Transaction Table 3rd as it is the more important that I have a working transaction table for the app and while comments are nice they aren't as necessary to the creation of my app as ensuring the transactions succeed. This table has **2 dependencies**, first the user/s that are used to require the transaction, and the Meme which is the Item being purchased. (This also allows for easier testing as you can test whether Users and Memes are working separately before testing Transactions).
-
-Comment: Finally comments has already been stated as having the **relations** to Users and Memes, making them impossible to exist without both of these tables.
+Devise: A gem that I used for authentication within my application, it allows for the creations of user via email and the encryption of passwords associated with those users.
 
 **R12. User Stories**
 
@@ -94,9 +102,31 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 ![](./readme_img/MemeMarket.png)
 
-DO THIS ONE AFTER FINISHING THE APP VVVVVVVVVVVVV
+**R.15 Explain the different high-level components (abstractions) in your app**
 
-Describe your project's models in terms of relationships (active record associations) they have with each other.
+**R16 Detail any third party services that your app will use?**
+Amazon Web Services s3 -  was used within this application as an online storage service for the images on my website, as my site continued to grow it would be impractical to continue to store pictures locally as it would very easiliy grow to an unmanageable level with the rails app. The Amazon Web Services allow you to create data storage on the "cloud" to store any pictures that a user uploads. Amazon S3 uses an API that allows a developer to get the storage cloud to communicate with their application to allow online storage. You can view all images uploaded
+Stripe - Stripe requires a gem to use on rails. Stripe is an online secure payment api that allows you to create a payment system for your app, it allows for the creation of a link to a secure payment and processing site and then link back the site at hand. This payment api can be used in test environments aswell which is good to make sure everything is working before the final transfer to full on payments. Its also possible to track the payments done on your website through stripes website.
 
-I will have several models in this project, one for User's, one for Meme's and one for Comment's, First off my Users as stated above will be the only one of the models to now have any dependencies, the way it will work is that Users can have many comments or memes but a meme can only have one user or a comment can only have one User. This is necessary as to allow new users to access the site and allow their profile to exist without having any content. Because of this in the model it will have in the Active record **has_many: meme** and **has_many: comments**. My Meme model will have a dependency to the User model but will also itself have a many relationship with comments. It will appear like this; **belongs_to: User** and **has_many: Comments**. The model for Comments, as stated above will have to be created last, as it relies on to other model's and their data to exist as it exists as a way of these 2 other models to communicate effectively on the front end. The Comment Model will have 2 main active record associations **belongs_to: User** and **belongs_to: Comment**
+**R.17 Describe your project's models in terms of relationships (active record associations) they have with each other.**
 
+In my original idea I had a project that had 4 models , with 2 additional models. My project as it stands today has 3 models. A **User's Model**, a **Meme's Model** and a **Comment Model**. My **User's Model** has a one to many relationship with the **Meme Model**, that is 1 **User** has many **Memes** . A **User** also has a one to many association with **comments**, one user has many comments. A **Meme model** has a one to many relationship with **Comments model** too. One meme can have many comments on it. Also a **Meme model** has a many to one relation with **Users** many memes can belong to one user. **Comments Model** has a many to one for both **Meme** and **User** model. I attempted to create a 'has_many :through' association through an additional model called "transactopn which is referenced in my sitemaps, however I did not have the time and the stripe gem takes over the responsiblities so it was pointless to enact a change. All models bar the first model **Users**  have a User_id Foreign key within them that is **null:false** meaning that all other models require a User_id within them to work effeciently. Additionally a comment requires a Meme_id and an User_id in order to be created. 
+
+**R18. Discuss the database relations to be implemented.** 
+
+My database has very few relations to keep the project simple and effective. There is 4 database tables in my design; **User**, **Meme**, **Transaction** and **Comment**.
+
+User table: The User Table has 3 associations; A **One(Zero) to Many(Zero)** relation with the Meme Table (meaning that one user can own many memes but also a possible 0 memes), a **Many to One** relation with comments (many comments belong to one User). Finally a single user could have many transactions (A **one to many** association). Because of these parameters I would implement the User table into the database first as it has no dependencies, this will be important because it'll be easy to test whether it is working separately (if there is any problems later on with dependencies it'll be a good reference point). 
+
+Meme: Memes as a class has a **many to one** relation with comments (many comments have one meme), also memes have a **one to many** with transactions (one meme has the potential of many transactions). I will make the Meme table, because it will be required that a User will make/ upload memes to the site so a Meme cannot exist without a User having creating it.
+
+Transaction: I will create The Transaction Table 3rd as it is the more important that I have a working transaction table for the app and while comments are nice they aren't as necessary to the creation of my app as ensuring the transactions succeed. This table has **2 dependencies**, first the user/s that are used to require the transaction, and the Meme which is the Item being purchased. (This also allows for easier testing as you can test whether Users and Memes are working separately before testing Transactions).
+
+Comment: Finally comments has already been stated as having the **relations** to Users and Memes, making them impossible to exist without both of these tables.
+
+**R.19 Provide your database schema design**
+![Schema1](./readme_img/Schema1.png)
+![Schema2](./readme_img/Schema2.png)
+
+**R.20 Describe the way tasks are allocated and tracked in your project**
+The tasks for my application were tracked using the Trello Board website, it allowed me to create small cards that I can give data such as; when they are due by and add them to list such as; urgent. The tasks were added to this board on Trello after reading through the T2A2 and evaluating what tasks would need to be done in which order and adding them to the trello board. Some of the tasks written in the T2A2 are required to do before others, such as the ERD's and the Wireframes's. Once these tasks were put into the Trello board i assigned them due dates based on when I thought based on the project how much time a project would need and a color label to display urgency. 
