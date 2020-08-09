@@ -101,8 +101,10 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 **R.14 ERD**
 
 ![](./readme_img/MemeMarket.png)
+![Final](./readme_img/ERD2.pdf)
 
 **R.15 Explain the different high-level components (abstractions) in your app**
+The High level components in my app are the User and the Memes and the ability to purchase Memes. The User  will have the ability to generate memes as well as keep a collection for themselves. The user will also be able to buy other peoples Memes to add to their collection. The Memes are important as it is the commodity that is being traded on the website, without the Memes the Users would have no reason to be on my website. Finally the ability to purchase other peoples memes is also integral to the website, without the ability to purchase memes the websites main problem that it is intending to solve would be lost.
 
 **R16 Detail any third party services that your app will use?**
 Amazon Web Services s3 -  was used within this application as an online storage service for the images on my website, as my site continued to grow it would be impractical to continue to store pictures locally as it would very easiliy grow to an unmanageable level with the rails app. The Amazon Web Services allow you to create data storage on the "cloud" to store any pictures that a user uploads. Amazon S3 uses an API that allows a developer to get the storage cloud to communicate with their application to allow online storage. You can view all images uploaded
