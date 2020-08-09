@@ -17,7 +17,7 @@ class MemesController < ApplicationController
 #redirects to user show page where ideally I wish to have a list of memes on user page
     def create
         @meme = @user.memes.new(spiciness_checker)
-        @meme.image.attach(spiciness_checker[:image])
+        @meme.images.attach(spiciness_checker[:image])
         if @meme.save
             redirect_to user_path(@user)
         else
