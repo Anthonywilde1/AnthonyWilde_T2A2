@@ -14,7 +14,7 @@ My marketplace is necessary as it will allow for the acceleration of the memes i
 
 **R9. Link to the deployed app**
  
-https://anthonywilde-t2a2.herokuapp.com/ 
+https://meme-market-6969.herokuapp.com/users/
 
 **R10 A Link to your GitHub repo**
 
