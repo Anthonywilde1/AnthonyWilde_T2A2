@@ -10,7 +10,7 @@ class PaymentsController < ApplicationController
          
         
         payment_id = params[:data][:object][:payment_intent]
-        payment = Stripe::PaymentIntent.retieve(payment_id)
+        payment = Stripe::PaymentIntent.retrieve):(payment_id)
         meme_id = payment.metadata.meme_id
         user_id = payment.metadata.user_id
         Meme.find(meme_id).update(user_id: user_id)
