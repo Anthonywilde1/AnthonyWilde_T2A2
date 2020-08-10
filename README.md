@@ -100,8 +100,8 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 **R.14 ERD**
 
-![](./readme_img/MemeMarket.png)
-![Final](./readme_img/ERD2.pdf)
+![Initial](./readme_img/MemeMarket.png)
+![Final](./readme_img/ERD2.png)
 
 **R.15 Explain the different high-level components (abstractions) in your app**
 The High level components in my app are the User and the Memes and the ability to purchase Memes. The User  will have the ability to generate memes as well as keep a collection for themselves. The user will also be able to buy other peoples Memes to add to their collection. The Memes are important as it is the commodity that is being traded on the website, without the Memes the Users would have no reason to be on my website. Finally the ability to purchase other peoples memes is also integral to the website, without the ability to purchase memes the websites main problem that it is intending to solve would be lost.
@@ -132,3 +132,4 @@ Comment: Finally comments has already been stated as having the **relations** to
 
 **R.20 Describe the way tasks are allocated and tracked in your project**
 The tasks for my application were tracked using the Trello Board website, it allowed me to create small cards that I can give data such as; when they are due by and add them to list such as; urgent. The tasks were added to this board on Trello after reading through the T2A2 and evaluating what tasks would need to be done in which order and adding them to the trello board. Some of the tasks written in the T2A2 are required to do before others, such as the ERD's and the Wireframes's. Once these tasks were put into the Trello board i assigned them due dates based on when I thought based on the project how much time a project would need and a color label to display urgency. 
+https://trello.com/b/PUm6sFyl/meme-marketplace

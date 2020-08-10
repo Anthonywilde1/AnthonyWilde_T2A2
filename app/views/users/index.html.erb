@@ -2,10 +2,13 @@
 <h1>Welcome Meme Friends! <h1>
 <h2> R.i.p Stefan Karl Stefansson</h2>
 <%# I implemented code to reduce call backs to database, new code created iteration of every user over the objects in @meme %>
-<%# @users.each do |u| %>
-<% @memes.reverse.each do |m| %> 
-    <h4>Name:<%= m.name %></h4></br>
-    <%= image_tag m.image if m.image.attached?  %>
-    <h6><%= link_to "#{m.name}'s page", user_meme_path(m[:user_id], m.id) %></h6></br>
-    <h6><%= link_to "Owner's Page", user_path(m.user_id) %></h6></br>
+<% @users.each do |u| %>
+    <% @memes.reverse.each do |m| %>
+        <% if u.id == m.user_id %> 
+        <h4>Name:<%= m.name %></h4></br>
+        <%= image_tag m.image if m.image.attached?  %>
+        <h6><%= link_to "#{m.name}'s page", user_meme_path(m[:user_id], m.id) %></h6></br>
+        <h6><%= link_to "#{u.username}'s Page", user_path(m.user_id) %></h6></br>
+        <% end %>
+    <% end %>
 <% end %>
