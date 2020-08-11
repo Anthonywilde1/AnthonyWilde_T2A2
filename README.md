@@ -36,8 +36,8 @@ Target audience: My website has a target audience of anyone, however being reali
 
 Sitemap:
 
-![Version 1](/readme_img/20200722_143844.jpg)
-![Version 2](/readme_img/20200808_152800.jpg)
+![Version 1](/docs/20200722_143844.jpg)
+![Version 2](/docs/20200808_152800.jpg)
 
 Tech stack
 Ruby: The programming language used to primarily create the app through an application called **Rails**. Rails creates ERB pages which are embedded ruby html pages. Creating a hybrid of HTML and ruby commands to create a webpage.
@@ -48,7 +48,9 @@ Stripe: An API that I used to create a payment platform for the memes. Stripe cr
 
 AWS/ Amazon Web Services: Amazon Web Services is an API that allows your web app to communicate with Amazon Web Services to create online storage or 'cloud' storage for your web app. It allows you to hand off the storage of images/gifs/videos/etc rather then having it all within the application, making the website more bulky or eventually exceed data storage capacity. 
 
-Devise: A gem that I used for authentication within my application, it allows for the creations of user via email and the encryption of passwords associated with those users.
+Postgresql: PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+
+Heroku: A free web deployment platform.
 
 **R12. User Stories**
 
@@ -80,28 +82,28 @@ As A User I want to be able to buy another person's meme through the page I'm vi
 
 **R.13** **Wireframes**
 
-![Login Page](./readme_img/LoginPage.png)
+![Login Page](./docs/LoginPage.png)
 
-![Create Account](./readme_img/CreateAccountPage.png)
+![Create Account](./docs/CreateAccountPage.png)
 
-![Marketplace](./readme_img/Marketplace.png)
+![Marketplace](./docs/Marketplace.png)
 
-![Main Page](./readme_img/MainPage.png)
+![Main Page](./docs/MainPage.png)
 
-![Show Html Page](./readme_img/ShowHtmlPage.png)
+![Show Html Page](./docs/ShowHtmlPage.png)
 
-![](./readme_img/Addingyourmemetothemememarketplacemaliciously.png)
+![](./docs/Addingyourmemetothemememarketplacemaliciously.png)
 
-![Create Account Page](readme_img/CreateAccountPage.png)
+![Create Account Page](./docs/CreateAccountPage.png)
 
-![Fixing the mistakes I made in my original posting](readme_img/FixingthemistakesImadeinmyoriginalposting.png)
+![Fixing the mistakes I made in my original posting](./docs/FixingthemistakesImadeinmyoriginalposting.png)
 
-![Purchasing Power of the People](readme_img/PurchasingPowerofthePeople.png)
+![Purchasing Power of the People](./docs/PurchasingPowerofthePeople.png)
 
 **R.14 ERD**
 
-![Initial](./readme_img/MemeMarket.png)
-![Final](./readme_img/ERD2.png)
+![Initial](./docs/MemeMarket.png)
+![Final](./docs/ERD2.png)
 
 **R.15 Explain the different high-level components (abstractions) in your app**
 The High level components in my app are the User and the Memes and the ability to purchase Memes. The User  will have the ability to generate memes as well as keep a collection for themselves. The user will also be able to buy other peoples Memes to add to their collection. The Memes are important as it is the commodity that is being traded on the website, without the Memes the Users would have no reason to be on my website. Finally the ability to purchase other peoples memes is also integral to the website, without the ability to purchase memes the websites main problem that it is intending to solve would be lost.
@@ -129,8 +131,8 @@ Comment: Finally comments has already been stated as having the **relations** to
 The final ERD which as seen above is similar but different to the initial design, as only the Users, Memes and Comments stayed while all other tables were removed for different reasons, Transactions was removed as adding the stripe gem made me feel like the table was meaningless. The admin table was removed due to time constraints aswell as the Top trending etc, both of these tables do seem possible and interesting features to bring into the project into the future but for the sake of this project they were removed to ship within time and without error(or little error). Besides whats listed the ERD relations are the same as the initial design.
 
 **R.19 Provide your database schema design**
-![Schema1](./readme_img/Schema1.png)
-![Schema2](./readme_img/Schema2.png)
+![Schema1](./docs/Schema1.png)
+![Schema2](./docs/Schema2.png)
 
 **R.20 Describe the way tasks are allocated and tracked in your project**
 The tasks for my application were tracked using the Trello Board website, it allowed me to create small cards that I can give data such as; when they are due by and add them to list such as; urgent. The tasks were added to this board on Trello after reading through the T2A2 and evaluating what tasks would need to be done in which order and adding them to the trello board. Some of the tasks written in the T2A2 are required to do before others, such as the ERD's and the Wireframes's. Once these tasks were put into the Trello board i assigned them due dates based on when I thought based on the project how much time a project would need and a color label to display urgency. 
