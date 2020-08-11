@@ -6,7 +6,7 @@
     <% @memes.reverse.each do |m| %>
         <% if u.id == m.user_id %> 
         <h4>Name:<%= m.name %></h4></br>
-        <%= image_tag m.image if m.image.attached?  %>
+        <%= image_tag m.image if m.image.attached? %>
         <h6><%= link_to "#{m.name}'s page", user_meme_path(m[:user_id], m.id) %></h6></br>
         <h6><%= link_to "#{u.username}'s Page", user_path(m.user_id) %></h6></br>
         <% end %>
