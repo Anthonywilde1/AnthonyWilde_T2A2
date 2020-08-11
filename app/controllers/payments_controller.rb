@@ -8,7 +8,7 @@ class PaymentsController < ApplicationController
     def webhook
         
          
-        
+        #this is the method for stripe payments
         payment_id = params[:data][:object][:payment_intent]
         payment = Stripe::PaymentIntent.retrieve(payment_id)
         meme_id = payment.metadata.meme_id

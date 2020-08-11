@@ -1,6 +1,6 @@
 <%= render partial: "shared/menu"%>
 
-
+<%# all the @meme is one call because of controller variable %>
 <h1><%= @meme.name %></h1>
     <p><%= image_tag @meme.image if @meme.image.attached?  %></p>
     <p>Description: <%= @meme.description %></p>

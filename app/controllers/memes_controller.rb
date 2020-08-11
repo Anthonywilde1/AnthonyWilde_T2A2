@@ -17,9 +17,9 @@ class MemesController < ApplicationController
 #redirects to user show page where ideally I wish to have a list of memes on user page
     def create
         @meme = @user.memes.new(spiciness_checker)
-        pp params[:image]
+       
         @meme.image.attach(spiciness_checker[:image])
-        pp @meme.image
+        
         if @meme.save
             redirect_to user_path(@user)
         else
@@ -27,6 +27,8 @@ class MemesController < ApplicationController
         end
     end
 
+    #showo method has stripe payment button in it requiring a large method
+    #comments is only seen within a meme, hence why it has no controller but is a model
     def show
         @meme = Meme.find(params[:id])
         @comment = @meme.comments
@@ -56,7 +58,7 @@ class MemesController < ApplicationController
         
     end
 
-
+    #redirect to remove any1 other than person who owns meme from editing meme
     def edit
         @meme = @user.memes.find(params[:id])
         if @user != current_user
@@ -81,6 +83,7 @@ class MemesController < ApplicationController
         params.permit(:user_id, :name, :description, :image, :price, :category, :for_sale)
     end
 
+    #cut down on DB calls
     def find_user
         @user = User.find(params[:user_id])
     end

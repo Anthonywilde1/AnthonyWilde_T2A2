@@ -1,5 +1,6 @@
 <%= render partial: "shared/menu"%>
 <h1><%= @user.username %></h1> 
+<%# Only the user who is current user can access edit and create %>
 <% if @user == current_user %>
     <%= link_to 'Edit User', edit_user_path(@user) %></br>
     <%= link_to 'Create Meme', new_user_meme_path(@user) %>

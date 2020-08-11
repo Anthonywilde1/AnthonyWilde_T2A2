@@ -126,6 +126,8 @@ Transaction: I will create The Transaction Table 3rd as it is the more important
 
 Comment: Finally comments has already been stated as having the **relations** to Users and Memes, making them impossible to exist without both of these tables.
 
+The final ERD which as seen above is similar but different to the initial design, as only the Users, Memes and Comments stayed while all other tables were removed for different reasons, Transactions was removed as adding the stripe gem made me feel like the table was meaningless. The admin table was removed due to time constraints aswell as the Top trending etc, both of these tables do seem possible and interesting features to bring into the project into the future but for the sake of this project they were removed to ship within time and without error(or little error). Besides whats listed the ERD relations are the same as the initial design.
+
 **R.19 Provide your database schema design**
 ![Schema1](./readme_img/Schema1.png)
 ![Schema2](./readme_img/Schema2.png)

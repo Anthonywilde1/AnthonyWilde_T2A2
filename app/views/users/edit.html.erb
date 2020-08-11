@@ -1,4 +1,5 @@
 <%= render partial: "shared/menu"%>
+<%# only a owner of account can edit their account %>
 <% if @user == current_user %>
  <% if @user.errors.any? %>
         <div id="error_explanation">
