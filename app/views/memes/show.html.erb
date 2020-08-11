@@ -9,7 +9,7 @@
     <p>For Sale: <%= @meme.for_sale %></p>
     <% if @user == current_user %>
         <%= link_to "Edit Meme", edit_user_meme_path %>
-    <% elsif @user != current_user && @meme.for_sale = true %>
+    <% elsif (@user != current_user) && (@meme.for_sale = true) %>
         <button data-stripe="payment"> 
         Buy Meme
         <%= number_to_currency(@meme.price) %></button>
