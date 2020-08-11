@@ -9,10 +9,11 @@
     <p>For Sale: <%= @meme.for_sale %></p>
     <% if @user == current_user %>
         <%= link_to "Edit Meme", edit_user_meme_path %>
-    <% else %>
+    <% elsif @user != current_user && @meme.for_sale = true %>
         <button data-stripe="payment"> 
         Buy Meme
         <%= number_to_currency(@meme.price) %></button>
+    <% else %>
     <% end %> 
         <script src="https://js.stripe.com/v3/"></script>
 
